@@ -17,6 +17,7 @@ public class JwtUtil {
 
 	public Claims getClaims(String token) {
 		Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+		
 
 		//// @formatter:off
 		return Jwts.parserBuilder()
@@ -26,6 +27,8 @@ public class JwtUtil {
 				.getBody();
 
 		// @formatter:on
+		
+		
 
 	}
 

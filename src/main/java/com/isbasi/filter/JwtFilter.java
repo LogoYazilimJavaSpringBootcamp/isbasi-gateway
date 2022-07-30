@@ -42,6 +42,7 @@ public class JwtFilter implements GatewayFilter {
 		log.info("remoteAddress: {}", remoteAddress);
 
 		HttpHeaders headers = request.getHeaders();
+		
 
 		boolean hasAuth = headers.containsKey(AUTHORIZATION);
 
